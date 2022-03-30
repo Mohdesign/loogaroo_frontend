@@ -1,0 +1,61 @@
+/* Who we are */
+.who .year {
+    padding: 25px 46px 17px 60px
+  }
+  .who .year h2{
+    font-size: 44px;
+    font-weight: 900;
+    color: rgba(0,0,0,0.1);
+    position: absolute;
+    left: -25px;
+    top: 15p;
+    margin-top: 36px;
+    line-height: normal;
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);
+  }
+  .who .year h3 {
+    font-weight: 800
+  }
+  .social-link {
+      width: 30px;
+      height: 30px;
+      border: 1px solid #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      border-radius: 50%;
+      transition: all 0.3s;
+      font-size: 0.9rem;
+  }
+  
+  .social-link:hover, .social-link:focus {
+      background: #ddd;
+      text-decoration: none;
+      color: #555;
+  }
+  
+  .jobs {
+    position: relative;
+  }
+  
+  .jobs span {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: .5rem;
+    line-height: 1.64;
+  }
+  
+  .jobs .job a{
+    color: #0d2eb3;
+    position: relative;
+    display: inline-block 
+  }
+  .jobs .col-md-10:nth-child(1) {
+    margin-top: 25px
+  }
+  
+  .job-details a{
+    color: #0d2eb3 
+  }

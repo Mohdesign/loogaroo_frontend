@@ -1,0 +1,339 @@
+table.table tr th, table.table tr td {
+    border-color: #e9e9e9!important;
+    padding: 12px 15px!important;
+    vertical-align: middle!important;
+    width: 25%!important;
+}
+
+.form-control {
+    padding: 1.300rem 0.75rem!important;
+    margin-top: 4px!important;
+}
+
+form label {
+    font-weight: 600!important;
+    color: rgb(50, 50, 77)!important;
+    font-size: 0.85rem!important;
+    line-height: 1.8!important;
+}
+
+form label  svg path {
+    color:rgb(142, 142, 169)!important;
+    fill: rgb(142, 142, 169)
+}
+.form-check-label {
+    padding: 6px!important;
+    padding-top: 0!important;
+    padding-bottom: 0!important;
+    margin-bottom: 3px!important;
+    margin-top: -5px!important;
+    display: inline-block!important;
+    position: absolute!important;
+}
+.custom-checkbox {
+    margin-bottom: 5px!important;
+}
+
+/* Custom CK-EDITOR*/
+.ck.ck-editor {
+    margin-top: 4px!important;
+    min-height: 300px!important;
+}
+.ck.ck-editor__main>.ck-editor__editable {
+    height: 350px!important;
+
+}
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) {
+    border-color: #ced4da!important;
+    min-height: 250px !important;
+    border-radius: 0.25rem!important;
+    font:auto!important;
+    font-size: auto!important;
+
+
+}
+/* .ck.ck-reset, .ck.ck-reset_all, .ck.ck-reset_all * {
+    background-color: #fff!important;
+    border-color: #ced4da!important;
+    color: #212529!important;
+} */
+.ck.ck-button, a.ck.ck-button {
+    border: 0!important;
+    min-height: 35px!important;
+}
+.ck.ck-toolbar {
+    border-bottom: 1px solid #ced4da!important;
+    border-radius: 0.3rem!important;
+    border-bottom-left-radius: 0!important;
+    border-bottom-right-radius: 0!important;
+    border-bottom: 0!important;
+}
+::-webkit-file-upload-button {
+    border: 1px solid rgb(217, 216, 255)!important;
+    background: rgb(240, 240, 255)!important;
+    padding: .7em!important;
+    border: 0!important;
+    border-radius: 0.25rem!important;
+  }
+
+  /*
+ * CKEditor 5 (v32.0.0) content styles.
+ * Generated on Wed, 09 Feb 2022 12:24:56 GMT.
+ * For more information, check out https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/content-styles.html
+ */
+ /* html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: auto!important;
+    font: auto!important;
+    vertical-align: baseline;
+} */
+.ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused h6,
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) h6,
+.ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused h5,
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) h5,
+.ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused h4,
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) h4,
+.ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused h3,
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) h3,
+.ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused h2,
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) h2,
+.ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused h1,
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) h1 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    line-height: 1.8;
+  }
+  .ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused p,
+  .ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) p {
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+  }
+
+  
+  .ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) h1, 
+  .ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused h1,
+  .ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) .h1 {
+    font-size: calc(1.375rem + 1.5vw);
+  }
+  @media (min-width: 1200px) {
+    .ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) h1, 
+    .ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused h1,
+    .ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) .h1 {
+      font-size: 2.5rem;
+    }
+  }
+  
+  .ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) h2,
+  .ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused h2, 
+  .ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) .h2 {
+    font-size: calc(1.325rem + 0.9vw);
+  }
+  @media (min-width: 1200px) {
+    .ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) h2,
+    .ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused h2,
+    .ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) .h2 {
+      font-size: 2rem;
+    }
+  }
+  
+  .ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) h3, 
+    .ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused h3,
+  .ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) .h3 {
+    font-size: calc(1.3rem + 0.6vw);
+  }
+  @media (min-width: 1200px) {
+    .ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) h3, 
+    .ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused h3,
+    .ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) .h3 {
+      font-size: 1.75rem;
+    }
+  }
+  
+  .ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) h4, 
+    .ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused h4,
+  .ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) .h4 {
+    font-size: calc(1.275rem + 0.3vw);
+  }
+  @media (min-width: 1200px) {
+    .ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) h4, 
+    .ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused h4,
+    .ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) .h4 {
+      font-size: 1.5rem;
+    }
+  }
+  
+  .ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) h5, 
+    .ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused h5,
+  .ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) .h5 {
+    font-size: 1.25rem;
+  }
+  
+  .ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) h6, 
+  .ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) .h6 {
+    font-size: 1rem;
+  }
+  
+
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) h1, 
+.ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused h1,
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) h2, 
+.ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused h2,
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) h3, 
+.ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused h3,
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) h4, 
+.ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused h4,
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) h5, 
+.ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused h5,
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) h6, 
+.ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused h6 {
+  font-weight: 500;
+  line-height: 1.2;
+}
+.ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused abbr[title],
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) abbr[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+.ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused abbr[data-bs-original-title],
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) abbr[data-bs-original-title] {
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+  cursor: help;
+  -webkit-text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
+}
+
+.ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused .address,
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) .address {
+  margin-bottom: 1rem;
+  font-style: normal;
+  line-height: inherit;
+}
+
+.ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused ol,
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) ol,
+.ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused ul,
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) ul {
+  padding-left: 2rem;
+  margin-bottom: 5px;
+}
+.ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused ol li,
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) ol li,
+.ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused ul li,
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) ul li {
+    list-style: auto;
+    line-height: 1.5;
+}
+
+.ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused ol,
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused),
+.ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused ul,
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused),
+.ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused dl
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused dt,
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) dt {
+  font-weight: 700;
+}
+
+.ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused dd,
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) dd {
+  margin-bottom: 0.5rem;
+  margin-left: 0;
+}
+
+.ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused blockquote,
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) blockquote {
+  margin: 0 0 1rem;
+}
+
+.ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused b,
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) b,
+.ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused strong,
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) strong {
+  font-weight: bolder;
+}
+
+.ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused small,
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) small {
+  font-size: 0.875em;
+}
+
+.ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused mark,
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) mark {
+  padding: 0.2em;
+  background-color: #fcf8e3;
+}
+
+.ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused sub,
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) sub,  
+.ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused sup,
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) sup {
+  position: relative;
+  font-size: 0.75em;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+.ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused sub,
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) sub {
+  bottom: -0.25em;
+}
+
+.ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused sup,
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) sup {
+  top: -0.5em;
+}
+
+.ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused a,
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) a {
+  color: #0d6efd;
+  text-decoration: underline;
+}
+.ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused a:hover,
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) a:hover {
+  color: #0a58ca;
+}
+
+.ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused a:not([href]):not([class]), 
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) a:not([href]):not([class]), 
+.ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused a:not([href]):not([class]):hover,
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) a:not([href]):not([class]):hover {
+  color: inherit;
+  text-decoration: none;
+}
+.ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused img,
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) img {
+  width: 100%;
+}
+
+.alertTop{
+  position: absolute;
+  left: 35%;
+  right: 0;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.Main-Subnav-container{
+  position: relative;
+  width: 460px;
+}
+.grid-item {
+  display: block;
+}
+.grid-MainNav-sidebar {
+  position: fixed;
+}
+.grid-SubNav-sidebar {
+  position: fixed;
+  left: 224px;
+}

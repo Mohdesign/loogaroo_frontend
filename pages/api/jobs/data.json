@@ -1,0 +1,18 @@
+{
+    "jobs":[
+        {
+          "id": "1",
+          "title": "Social media specialist",
+          "subtitle": "Fulltime - Bathurst, NB",
+          "slug": "social-media-specialist",
+          "desc": "Websolutions.ca is looking to grow its team! For almost 20 years Websolutions.ca has been designing cutting edge websites and applications for clients big and small. Our client base encompasses many industries, and our awesome team of graphic designers, programmers and marketing professionals always aim to deliver unique, cost effective solutions for each client. We are seeking an exceptional multi-talented individual to join us as a Social"
+        },
+        {
+        "id": "2",
+        "title": "Web programmer (ruby on rails)",
+        "subtitle": "Fulltime - Bathurst, NB",
+        "slug": "web-programmer-ruby-on-rails",
+        "desc": "Websolutions.ca is looking to grow its team! For almost 20 years Websolutions.ca has been designing cutting edge websites and applications for clients big and small. Our client base encompasses many industries, and our awesome team of graphic designers, programmers and marketing professionals always aim to deliver unique, cost effective solutions for each client. We are seeking an exceptional multi-talented individual to join us as a Social"
+        }
+    ]
+}

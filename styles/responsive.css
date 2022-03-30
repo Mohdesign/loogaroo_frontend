@@ -1,0 +1,43 @@
+/* ////////////////////////////////////////
+
+responsive
+/////////////////////////////////////////*/
+@media screen and (max-width:991px){
+  .navbar-light .navbar-nav .nav-link,
+  .navbar-nav span {
+    font-size: 25px!important;
+  }
+  .headline-subtitle {
+    font-size: 25px!important;
+  }
+  .headline-content.intro .headline-title {
+    font-size: 50px!important;
+  }
+  .display-3 {
+      font-size: 2.5rem;
+      font-weight: 300;
+      line-height: 1.2;
+  }
+ 
+  .navbar-collapse {
+    display: flex !important;
+    flex-basis: 92%;
+    flex-grow: -1;
+    align-items: center;
+    justify-content: center;
+    background: #000000;
+
+    padding: 15px 0;
+    border-radius: 7px;
+  }
+
+}
+
+@media screen and (max-width:667px){
+  .headline-content .headline-title {
+    font-size: 50px!important;
+  }
+  .headline-content.intro {
+    padding: 75px 0 0px 0;
+  }
+}

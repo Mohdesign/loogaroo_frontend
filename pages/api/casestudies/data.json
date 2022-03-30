@@ -1,0 +1,40 @@
+{
+    "casestudies":[
+        {
+            "id": 1,
+            "num": "01",
+            "title": "Club Des Amis",
+            "slug": "club-des-amis",
+            "imageUrl": "/images/case-studies/work1.jpg",
+            "desc": "Arcu cursus euismod quis viverra nibh cras pulvinar mattis. Vestibulum rhoncus est pellentesque elit ullamcorper. Non blandit massa enim nec dui nunc mattis enim."
+          },
+          {
+            "id": 2,
+            "num": "02",
+            "title": "Rogers Electric Motor Service",
+            "slug": "rogers-electric-motor-service",
+            "imageUrl": "/images/case-studies/work2.jpg",
+            "desc": "Arcu cursus euismod quis viverra nibh cras pulvinar mattis. Vestibulum rhoncus est pellentesque elit ullamcorper. Non blandit massa enim nec dui nunc mattis enim."
+          },
+          {
+            "id": 3,
+            "num": "03",
+            "title": "Go To Insure",
+            "slug": "go-to-insure",
+            "imageUrl": "/images/case-studies/work3.jpg",
+            "desc": "Arcu cursus euismod quis viverra nibh cras pulvinar mattis. Vestibulum rhoncus est pellentesque elit ullamcorper. Non blandit massa enim nec dui nunc mattis enim."
+          },
+          {
+            "id": 4,
+            "num": "04",
+            "title": "Shop Management System",
+            "slug": "shop-management-system",
+            "imageUrl": "/images/case-studies/work4.jpg",
+            "desc": "Arcu cursus euismod quis viverra nibh cras pulvinar mattis. Vestibulum rhoncus est pellentesque elit ullamcorper. Non blandit massa enim nec dui nunc mattis enim."
+          }
+         
+    ]
+    
+  }
+  
+ 

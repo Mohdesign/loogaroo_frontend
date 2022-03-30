@@ -1,0 +1,44 @@
+{
+    "services":[
+          {
+            "id": "1",
+            "title": "Website Development",
+            "slug": "website-development",
+            "imageUrl": "/images/solutions/website-development-4.svg",
+            "desc": "Designing and developing custom websites for all industries, large and small."
+          },
+          {
+              "id": "2",
+              "title": "Design & Branding",
+              "slug": "design-branding",
+              "imageUrl": "/images/solutions/digital-marketing.svg",
+              "desc": "Need print material for your next tradeshow, perhaps a booth designed? Maybe your menu needs a facelift."
+            },
+          {
+            "id": "3",
+            "title": "Social Media Management",
+            "slug": "social-media-management",
+            "imageUrl": "/images/solutions/social-media-1.svg",
+            "desc": "Do you need help creating and managing your social media platforms?"
+          },
+          {
+            "id":"4",
+            "title": "Custom Management Systems",
+            "slug": "custom-management-systems",
+            "imageUrl": "/images/solutions/the-kitchen-1.svg",
+            "desc": "Many say exploration is part of our destiny, but it’s actually our duty to future generations."
+          },
+          {
+            "id": "5",
+            "title": "Digital Marketing",
+            "slug": "digital-marketing",
+            "imageUrl": "/images/solutions/digital-marketing.svg",
+            "desc": "Whether you’re looking to get more clicks to your website, grow online sales, get the phones ringing or get an edge on your competition, we can help."
+          }
+        
+         
+    ]
+    
+  }
+  
+ 
