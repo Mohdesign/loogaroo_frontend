@@ -7,7 +7,7 @@ import DividerPrimary from '@/components/DividerPrimary'
 export default function ProjectsList({projectsList}) {
 
   return (
-    <Layout title={"Loogaroo | Animation Studio"}>
+    <Layout title={"Projects | Loogaroo Animation Studio"}>
       {console.log(projectsList)}
       <><div className="main-content">
         <Projects  projectsList={projectsList}/>

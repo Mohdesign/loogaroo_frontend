@@ -1,13 +1,9 @@
-import Header from "@/components/Header"
 import Layout from "@/components/Layout"
-import Cta from "@/components/Cta"
 
 export default function Contact() {
     return (
         <Layout title={"Contact | websolutions.ca"}> 
         <>
-            <Header title={"Contact us"} subtitle={"Have Any Questions? We Can Help"} />
-
             <section className="contact">
                 <div className="container">
                 <div className="row">
@@ -83,8 +79,7 @@ export default function Contact() {
                 </div>
                 
             </section>
-            <Cta title={"We guide users to their best experiences."} btn={"Let's Get Started"}/>
-        </>
+         </>
         </Layout>
     )
 }

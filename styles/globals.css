@@ -110,7 +110,11 @@ a.link:hover {
 a.link:hover::before {
   background: #000
 }
-
+.lead {
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 2.2rem;
+}
 .space-md {
   padding-top: 90px;
   padding-bottom: 90px
@@ -390,7 +394,7 @@ Header intro
 /* Portfolio */
 
 #portfolio-filters {
-  margin-bottom: 50px
+  margin-bottom: 40px
 }
 .single-project {
   color: #fff;
@@ -519,8 +523,8 @@ Header intro
 .project-intro li {
   font-size: 18px;
   color: #fff;
-  padding: 12px 0 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 12px 0 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 /*    max-width: 200px*/
 }
 
@@ -535,7 +539,7 @@ Header intro
 }
 
 .single-project .headline-content .headline-title {
-  font-size: 45px;
+  font-size: 70px;
   line-height: normal;
 }
 /* Crew */

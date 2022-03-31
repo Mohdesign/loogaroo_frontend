@@ -255,6 +255,6 @@ export default function Layout({ children, title, description, keywords}) {
 {/* default roots for <Head></Head> */}
 Layout.defaultProps = {
     title: "Websolutions.ca",
-    description: "Websolutions.ca is a web technology firm that specializes in websites, design, marketing and custom web based applications. Located in Bathurst, New Brunswick.  ",
-    keywords: "bathurst web design, new brunswick websites, new brunswick web services, custom web based applications, motor management system"
+    description: "Loogaroo Animation &amp; Games is a Canadian production company that provides 2D animation services for the web, television, feature film &amp; games.",
+    keywords: "new brunswick animation, full animation productions, Canadian Animation Studios, maritimes animation studio, animation, tax credit on animation, animation, video, games, flash games, flash animation, flash, animation, studios, canada, games, service work, full production, tax credit animation incentive"
 }

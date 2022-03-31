@@ -8,9 +8,8 @@ import { fetchAPI } from "../../lib/api";
 export default function SingleProject({project}) {
 
   return (
-    <Layout title={"Loogaroo | Animation Studio"}>
-      {console.log(project.attributes.title)}
-      <><div className="main-content">
+    <Layout title={project.attributes.title}>
+       <><div className="main-content">
       
         <section className='single-project'>
             <div className="container" id="portfolio">
@@ -39,7 +38,7 @@ export default function SingleProject({project}) {
                 </div>
                 </figure>
                 <div className="row d-flex justify-content-start space-sm mt-5">
-                    <div className="col-md-4 pl-5">
+                    <div className="col-md-4 pl-md-5">
                         <ul className="list-unstyled project-intro">
                             <li className="title">Project Details</li>
                             <li><b>CLIENT:</b> {project.attributes.client}</li>
@@ -47,18 +46,18 @@ export default function SingleProject({project}) {
                             <li><b>PROJECT: </b>{project.attributes.type}</li>
                         </ul>
                     </div>
-                    <div className="col-md-7 offset-md-1 pr-5">
+                    <div className="col-md-7 offset-md-1 pr-md-4">
                         <p className="lead"> {project.attributes.content}</p>
                     </div>
                 </div>
                 
                 
-                <div className="row ">
+                {/* <div className="row ">
                     <div className="col-md-12 d-flex align-items-end justify-content-end mr-5">
                         <p className=""><a href=""   className="mr-2 btn-pre py-1 px-2">Previous</a></p> 
                         <p className=""><a href="#\" className="ml-2 btn-next py-1 px-2">  Next</a></p> 
                     </div>
-                </div>
+                </div> */}
                 
             </div>
         </section>
