@@ -47,7 +47,7 @@ export default function SingleProject({project}) {
                         </ul>
                     </div>
                     <div className="col-md-7 offset-md-1 pr-md-4">
-                        <p className="lead"> {project.attributes.content}</p>
+                        <div className="lead" dangerouslySetInnerHTML={{__html: project.attributes.content}}/>
                     </div>
                 </div>
                 
