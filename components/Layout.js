@@ -174,23 +174,15 @@ export default function Layout({ children, title, description, keywords}) {
 
         }
 
-        // navigation
-        var OnePageNavigation = function() {
-            var navToggler = $('.site-menu-toggle');
-                $("body").on("click", ".navbar-nav li a[href^='#'], a[href^='#']", function(e) {
-                e.preventDefault();
-
-                var hash = this.hash;
-
-                $('html, body').animate({
-                'scrollTop': $(hash).offset().top
-                }, 600, 'easeInOutCirc', function(){
-                window.location.hash = hash;
-                });
-
-            });
-        };
-        OnePageNavigation();
+        //smoth scroll when click on .navbar-nav li a
+        $('a.nav-link.js-scroll-trigger').on('click', function(e) {
+            e.preventDefault();
+            var target = $(this).attr('href');
+            $('html, body').animate({
+                scrollTop: $(target).offset().top
+            }, 1000);
+        });
+ 
     }, [])
     return (
         <>

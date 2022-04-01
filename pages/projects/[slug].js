@@ -1,5 +1,8 @@
 import Layout from '@/components/Layout'
 import Projects from '@/components/Projects'
+import ReactMarkdown from "react-markdown";
+ 
+
 import DividerPrimary from '@/components/DividerPrimary'
 import { fetchAPI } from "../../lib/api";
 
@@ -47,8 +50,15 @@ export default function SingleProject({project}) {
                         </ul>
                     </div>
                     <div className="col-md-7 offset-md-1 pr-md-4">
-                        <div className="lead" dangerouslySetInnerHTML={{__html: project.attributes.content}}/>
+                         <div className="lead" dangerouslySetInnerHTML={{__html: project.attributes.content}}/> 
+
+                        <ReactMarkdown escapeHtml={false}>{project.attributes.content}</ReactMarkdown>
+                        
+ 
+ 
                     </div>
+
+
                 </div>
                 
                 

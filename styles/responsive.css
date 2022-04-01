@@ -8,10 +8,14 @@ responsive
     font-size: 25px!important;
   }
   .headline-subtitle {
-    font-size: 25px!important;
+    font-size: 22px!important;
   }
   .headline-content.intro .headline-title {
-    font-size: 50px!important;
+    font-size: 40px!important;
+  }
+  .divider-horizontal {
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
   .display-3 {
       font-size: 2.5rem;

@@ -50,7 +50,7 @@ export default function Nav (){
                                         <div className="collapse navbar-collapse" id="navbarResponsive">
                                             <ul className="navbar-nav">
                                             
-                                                <li className="nav-item"> <Link href="/"><a  className="nav-link js-scroll-trigger" ><i class="fas fa-arrow-left"></i> Home </a></Link> </li>
+                                                <li className="nav-item"> <Link href="/"><a  className="nav-link" ><i class="fas fa-arrow-left"></i> Home </a></Link> </li>
                                                  
                                             </ul>
                                         </div>
