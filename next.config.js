@@ -6,5 +6,9 @@ module.exports = {
    images: {
       domains: ['localhost:1337','res.cloudinary.com'],
     },
+    swcMinify: {
+      enabled: false,
+    },
+       
 };
  
