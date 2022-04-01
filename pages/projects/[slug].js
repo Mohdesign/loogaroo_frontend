@@ -1,8 +1,5 @@
 import Layout from '@/components/Layout'
-import Projects from '@/components/Projects'
 import ReactMarkdown from "react-markdown";
- 
-
 import DividerPrimary from '@/components/DividerPrimary'
 import { fetchAPI } from "../../lib/api";
 
