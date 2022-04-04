@@ -31,10 +31,15 @@ export default function SingleProject({project}) {
                 </header>
                 <figure> 
                 <div className="embed-responsive embed-responsive-16by9">
-                <iframe className="embed-responsive-item" 
+                {/* <iframe className="embed-responsive-item" 
                 src= {"https://www.youtube.com/embed/" + project.attributes.video}
                 
-                allowfullscreen></iframe>
+                allowfullscreen></iframe> */}
+
+                
+                 <div className="lead" dangerouslySetInnerHTML={{__html: project.attributes.video}}/> 
+
+                {/* <iframe src="https://player.vimeo.com/video/672681772?h=3d08603412&color=ffffff&title=0&byline=0&portrait=0&badge=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe> */}
                 </div>
                 </figure>
                 <div className="row d-flex justify-content-start space-sm mt-5">
@@ -49,9 +54,8 @@ export default function SingleProject({project}) {
                     <div className="col-md-7 offset-md-1 pr-md-4">
                          <div className="lead" dangerouslySetInnerHTML={{__html: project.attributes.content}}/> 
 
-                        <ReactMarkdown escapeHtml={false}>{project.attributes.content}</ReactMarkdown>
+                        {/* <ReactMarkdown escapeHtml={false}>{project.attributes.content}</ReactMarkdown> */}
                         
- 
  
                     </div>
 
