@@ -2,8 +2,6 @@ import Image from "next/image"
 import Layout from "@/components/Layout"
 
 import Link from "next/link"
-
-
 export default function Custom404() {
     return (
         <Layout title={"404 | websolutions.ca"}>
