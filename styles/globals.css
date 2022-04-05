@@ -81,7 +81,6 @@ a {
 a:hover,
 a:focus,
 a:active {
-  text-decoration: line-through;
   color: var(--primary-color);
 }
 
@@ -313,13 +312,11 @@ Navigation
 }
 
 .navbar-light .navbar-nav .nav-link.active {
-  text-decoration: line-through;
   color: var(--secondary-color);
 }
 .navbar-light .navbar-nav .nav-link:active,
 .navbar-light .navbar-nav .nav-link:focus {
   color: var(--secondary-color);
-  text-decoration: line-through;
 }
 /*/////////////////////
 Header intro 
@@ -591,14 +588,13 @@ padding-top: 3px;
   position: relative;
   display: block;
   padding-top: 3px;
-  color: inherit;
+  color: var(--primary-color);
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out
 }
 
 .contact-info a:hover {
-  text-decoration: line-through;
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 
@@ -637,6 +633,7 @@ display: inline-block;
 }
 
 .footer ul li a:hover {
+  text-decoration: none;
 color: var(--secondary-color);
 }
 .copy {
