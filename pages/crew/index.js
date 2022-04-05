@@ -1,27 +1,17 @@
 import Layout from '@/components/Layout'
-import Bio from '@/components/Bio'
-import Projects from '@/components/Projects'
 import Crew from '@/components/Crew'
-import Contact from '@/components/Contact'
 import DividerPrimary from '@/components/DividerPrimary'
-import DividerSecondary from '@/components/DividerSecondary'
-import { API_URL } from 'url.config';
 
 
 
-export default function Home({projectsList,crew}) {
+export default function CrewList({crew}) {
 
   return (
-    <Layout title={"Loogaroo | Animation Studio"}>
-      {console.log(projectsList)}
+    <Layout title={"Projects | Loogaroo Animation Studio"}>
+      {console.log(crew)}
       <><div className="main-content">
-        <Projects  projectsList={projectsList}/>
+        <Crew  crew={crew}/>
         <DividerPrimary />
-        <Bio />
-        <DividerSecondary />
-        <Crew crew={crew} />
-        <DividerSecondary />
-        <Contact />
         </div>
       </>
     </Layout>
@@ -30,15 +20,10 @@ export default function Home({projectsList,crew}) {
 
 export async function getStaticProps(){
   const API_URL = process.env.NEXT_PUBLIC_STRAPI_API_URL;
-  const res = await fetch(`${API_URL}/api/projects?populate=*`);
-  const res2 = await fetch(`${API_URL}/api/crews?populate=*`);
-  const projectsList = await res.json();
-  const crew = await res2.json();
+  const res = await fetch(`${API_URL}/api/crews?populate=*`);
+   const crew = await res.json();
   return {
-      props: {
-        projectsList,
-        crew
-      },
+      props: {crew},
       revalidate: 1
   }
 }

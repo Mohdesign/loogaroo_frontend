@@ -23,230 +23,27 @@ export default function Crew ({crew}) {
                 </div>
             </div>
             <div className="row d-flex align-content-center text-center">
-                <div className="col-md-4">
-                    <div className="single-crew">
-                        <div className="crew-image"><Image src="/images/crew/jesse.png"  width={350} height={350}  className="img-fluid" alt="" /></div>
-                        <div className="crew-content">
-                            <div className="crew-name">
-                                <h3 className="crew-title">
-                                    <a href="crew-member.html">
-                                        <span className="crew-name-first">Jesse</span>
-                                    </a>
-                                </h3>
-                             </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div className="col-md-4">
-                    <div className="single-crew">
-                        <div className="crew-image"><Image src="/images/crew/gene.png"  width={350} height={350}  className="img-fluid" alt="" /></div>
-                        <div className="crew-content">
-                            <div className="crew-name">
-                                <h3 className="crew-title">
-                                    <a href="crew-member.html">
-                                        <span className="crew-name-first">Gene</span>
-                                    </a>
-                                </h3>
+                {crew.data.map((singleCrew, index) => (
+                    <div className="col-md-4">
+                        <div className="single-crew">
+                            <div className="crew-image">
+                                <Image src={singleCrew.attributes.picture.data.attributes.url}  width={350} height={350}  className="img-fluid" alt="" />
+                            </div>
+                            <div className="crew-content">
+                                <div className="crew-name">
+                                    <h3 className="crew-title">
+                                        <Link href={`/crew/${singleCrew.attributes.slug}`}> 
+                                            <a><span className="crew-name-first">{singleCrew.attributes.name}</span></a>
+                                        </Link>
+                                    </h3>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="col-md-4">
-                    <div className="single-crew">
-                        <div className="crew-image"><Image src="/images/crew/casey.png"  width={350} height={350}  className="img-fluid" alt="" /></div>
-                        <div className="crew-content">
-                            <div className="crew-name">
-                                <h3 className="crew-title">
-                                    <a href="crew-member.html">
-                                        <span className="crew-name-first">Casey</span>
-                                    </a>
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                ))}
+
             </div>
 
-            <div className="row d-flex align-content-center text-center">
-                <div className="col-md-4">
-                    <div className="single-crew">
-                        <div className="crew-image"><Image src="/images/crew/simon.png"  width={350} height={350}  className="img-fluid" alt="" /></div>
-                        <div className="crew-content">
-                            <div className="crew-name">
-                                <h3 className="crew-title">
-                                    <a href="crew-member.html">
-                                        <span className="crew-name-first">Simon</span>
-                                    </a>
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-md-4">
-                    <div className="single-crew">
-                        <div className="crew-image"><Image src="/images/crew/david.png"  width={350} height={350}  className="img-fluid" alt="" /></div>
-                        <div className="crew-content">
-                            <div className="crew-name">
-                                <h3 className="crew-title">
-                                    <a href="crew-member.html">
-                                        <span className="crew-name-first">David</span>
-                                    </a>
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-md-4">
-                    <div className="single-crew">
-                        <div className="crew-image"><Image src="/images/crew/kelly.png"  width={350} height={350}  className="img-fluid" alt="" /></div>
-                        <div className="crew-content">
-                            <div className="crew-name">
-                                <h3 className="crew-title">
-                                    <a href="crew-member.html">
-                                        <span className="crew-name-first">Kelly</span>
-                                    </a>
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div className="row d-flex align-content-center text-center">
-                <div className="col-md-4">
-                    <div className="single-crew">
-                        <div className="crew-image"><Image src="/images/crew/jesse2.png"  width={350} height={350}  className="img-fluid" alt="" /></div>
-                        <div className="crew-content">
-                            <div className="crew-name">
-                                <h3 className="crew-title">
-                                    <a href="crew-member.html">
-                                        <span className="crew-name-first">Jesse</span>
-                                    </a>
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-md-4">
-                    <div className="single-crew">
-                        <div className="crew-image"><Image src="/images/crew/josie.png"  width={350} height={350}  className="img-fluid" alt="" /></div>
-                        <div className="crew-content">
-                            <div className="crew-name">
-                                <h3 className="crew-title">
-                                    <a href="crew-member.html">
-                                        <span className="crew-name-first">Josie</span>
-                                    </a>
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-md-4">
-                    <div className="single-crew">
-                        <div className="crew-image"><Image src="/images/crew/heather.png"  width={350} height={350}  className="img-fluid" alt="" /></div>
-                        <div className="crew-content">
-                            <div className="crew-name">
-                                <h3 className="crew-title">
-                                    <a href="crew-member.html">
-                                        <span className="crew-name-first">Heather</span>
-                                    </a>
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div className="row d-flex align-content-center text-center">
-                <div className="col-md-4">
-                    <div className="single-crew">
-                        <div className="crew-image"><Image src="/images/crew/mai.png"  width={350} height={350}  className="img-fluid" alt="" /></div>
-                        <div className="crew-content">
-                            <div className="crew-name">
-                                <h3 className="crew-title">
-                                    <a href="crew-member.html">
-                                        <span className="crew-name-first">Mai</span>
-                                    </a>
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-md-4">
-                    <div className="single-crew">
-                        <div className="crew-image"><Image src="/images/crew/ryan.png"  width={350} height={350}  className="img-fluid" alt="" /></div>
-                        <div className="crew-content">
-                            <div className="crew-name">
-                                <h3 className="crew-title">
-                                    <a href="crew-member.html">
-                                        <span className="crew-name-first">Ryan</span>
-                                    </a>
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-md-4">
-                    <div className="single-crew">
-                        <div className="crew-image"><Image src="/images/crew/nadi.png"  width={350} height={350}  className="img-fluid" alt="" /></div>
-                        <div className="crew-content">
-                            <div className="crew-name">
-                                <h3 className="crew-title">
-                                    <a href="crew-member.html">
-                                        <span className="crew-name-first">Nadi</span>
-                                    </a>
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div className="row d-flex align-content-center text-center">
-                <div className="col-md-4">
-                    <div className="single-crew">
-                        <div className="crew-image"><Image src="/images/crew/delano.png"  width={350} height={350}  className="img-fluid" alt="" /></div>
-                        <div className="crew-content">
-                            <div className="crew-name">
-                                <h3 className="crew-title">
-                                    <a href="crew-member.html">
-                                        <span className="crew-name-first">Delano</span>
-                                    </a>
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-md-4">
-                    <div className="single-crew">
-                        <div className="crew-image"><Image src="/images/crew/isabel.png"  width={350} height={350}  className="img-fluid" alt="" /></div>
-                        <div className="crew-content">
-                            <div className="crew-name">
-                                <h3 className="crew-title">
-                                    <a href="crew-member.html">
-                                        <span className="crew-name-first">Isabel</span>
-                                    </a>
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-md-4">
-                    <div className="single-crew">
-                        <div className="crew-image"><Image src="/images/crew/josee.png"  width={350} height={350}  className="img-fluid" alt="" /></div>
-                        <div className="crew-content">
-                            <div className="crew-name">
-                                <h3 className="crew-title">
-                                    <a href="crew-member.html">
-                                        <span className="crew-name-first">Josée</span>
-                                    </a>
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div className="row d-flex align-content-center text-center mt-4">
                 <div className="col-md-12 mx-auto">
                     <p className="headline-subtitle">

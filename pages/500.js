@@ -7,7 +7,7 @@ export default function Custom500() {
     return (
         <Layout title={"505 | websolutions.ca"}>
         <>
-        <header className="space-sm subpages mb-5 pb-5">
+        <header className="space-sm subpages mb-0 pb-5">
             <div className="container">
                 <div className="row d-flex align-items-center justify-content-center">
                     <div className="col-md-8">
