@@ -44,17 +44,17 @@ import moment from "moment";
 
 import { useState } from "react";
 
-export default function Services({ services, page }) {
-        //console.log(services.meta.pagination.total + " total services");
+export default function projects({ projects, page }) {
+        //console.log(projects.meta.pagination.total + " total projects");
 
         const router = useRouter();
         
-        // get the page name & service count
+        // get the page name & project count
         const pageName = router.pathname.split('/')[2];
-        const servicesCount = services.meta.pagination.total;
+        const projectsCount = projects.meta.pagination.total;
         
         // get the last 
-        const lastPage = Math.ceil(services.meta.pagination.total / 6);
+        const lastPage = Math.ceil(projects.meta.pagination.total / 6);
 
         // create an array containing the page numbers
         const pageNumbers = [];
@@ -69,14 +69,14 @@ export default function Services({ services, page }) {
         const [allChecked, setAllChecked] = useState(false);
         const [deleteButton, setDeleteButton] = useState(false);
 
-        // delete service
+        // delete project
         const [isVisible, setIsVisible] = useState(false);
-        const [service, setService] = useState({});
+        const [project, setproject] = useState({});
             
-        const deleteService = async (id) => {           
+        const deleteproject = async (id) => {           
             const API_URL = process.env.NEXT_PUBLIC_STRAPI_API_URL;     
             try {
-                const response = await fetch(`${API_URL}/api/services/${id}`, {
+                const response = await fetch(`${API_URL}/api/projects/${id}`, {
                     method: 'DELETE',
                     headers: {
                         'Content-Type': 'application/json',
@@ -88,14 +88,14 @@ export default function Services({ services, page }) {
                 if ( response.status === 200 ) {
                 //wait seconds and redirect to the new page
                 setTimeout(() => {
-                    router.push("/admin/services?page=1");
+                    router.push("/admin/projects?page=1");
                 } 
                 , 1200);
                 // remove toast after seconds
                 setTimeout(() => {
                     toast.dismiss();
                 }, 1000);
-                    toast.success("Service deleted successfully");        
+                    toast.success("project deleted successfully");        
                     setIsVisible(false);
                 }
             } catch (error) {
@@ -104,12 +104,12 @@ export default function Services({ services, page }) {
         }
 
         // delete multiple checkbox function    
-        const DeleteSelectedService = async (id) => {
+        const DeleteSelectedproject = async (id) => {
             const API_URL = process.env.NEXT_PUBLIC_STRAPI_API_URL;   
             try {
                 // craete array of filter 
                 Array.from(checkoxval).forEach(async (id) => {
-                    const response = await fetch(`${API_URL}/api/services/${id}`, {
+                    const response = await fetch(`${API_URL}/api/projects/${id}`, {
                         method: 'DELETE',
                         headers: {
                             'Content-Type': 'application/json',
@@ -123,14 +123,14 @@ export default function Services({ services, page }) {
                 if ( response.status === 200 ) {
                     //wait seconds and redirect to the new page
                     setTimeout(() => {
-                        router.push("/admin/services?page=1");
+                        router.push("/admin/projects?page=1");
                     }
                     , 1200);
                     // remove toast after seconds
                     setTimeout(() => {
                         toast.dismiss();
                     }, 1000);
-                    toast.success("Service deleted successfully");
+                    toast.success("project deleted successfully");
                     setIsVisible(false);
                     setDeleteButton(false);
 
@@ -142,13 +142,13 @@ export default function Services({ services, page }) {
     }
 
     // show the popup
-    const showPopup = (service) => {
-        // This runs when the button on the service is clicked and we want to show the popup
+    const showPopup = (project) => {
+        // This runs when the button on the project is clicked and we want to show the popup
         setIsVisible(true);
-        setService(service);
+        setproject(project);
     }
 
-    // count how many services are checked
+    // count how many projects are checked
     const countChecked = () => {
         // count the number of checked items
         const checkedCount = checkedItems.length;
@@ -159,28 +159,28 @@ export default function Services({ services, page }) {
    
     <StaticRouter 
     >
-        <AdminLayout title={"Services | websolutions.ca"}>
+        <AdminLayout title={"projects | websolutions.ca"}>
             <>
             <ToastContainer />
             <Box background="neutral100" padding={0}>
                 <HeaderLayout 
                 primaryAction={<Button startIcon={<Plus />}
                 onClick={() => 
-                    router.push(`/admin/services/create`)
+                    router.push(`/admin/projects/create`)
                 }>Create an entry</Button>} 
 
-                navigationAction={<Link startIcon={<ArrowLeft />} TO="/services"
+                navigationAction={<Link startIcon={<ArrowLeft />} TO="/projects"
                 onClick={() => router.back()}
                 >  
                 <a> Go back</a>
-                </Link>} title={pageName} subtitle={servicesCount + " entries found"} as="h2" />
+                </Link>} title={pageName} subtitle={projectsCount + " entries found"} as="h2" />
 
             </Box>
                
             <ThemeProvider theme={lightTheme}>
                             
             {
-                services.data.length === 0 ?
+                projects.data.length === 0 ?
                 <Box padding={0} background="neutral100">
                     <EmptyStateLayout
                     icon={<EmptyDocuments width="160px" />}
@@ -188,9 +188,9 @@ export default function Services({ services, page }) {
                     action={<Button 
                     variant="secondary" startIcon={<Plus />}
                     onClick={() =>
-                        router.push(`/admin/services/create`)
+                        router.push(`/admin/projects/create`)
                     }>
-                    Create your first service entry
+                    Create your first project entry
                     </Button>} />
                 </Box>
                 : 
@@ -210,9 +210,9 @@ export default function Services({ services, page }) {
                                     setAllChecked(false);
                                     // if there are checked items
                                     if (checkedItems.length > 0) {
-                                        DeleteSelectedService (checkedItems);
+                                        DeleteSelectedproject (checkedItems);
                                     } else {
-                                        toast.error("Please select at least one service to delete");
+                                        toast.error("Please select at least one project to delete");
                                     }
                                 }} 
                                 >Delete</Button>
@@ -224,7 +224,7 @@ export default function Services({ services, page }) {
                         : null
                     }
  
-                    <Table colCount={10} rowCount={6} footer={<TFooter  icon={<Plus />} onClick={() => router.push(`/admin/services/create`) }>Add another field to this collection type</TFooter>}>
+                    <Table colCount={10} rowCount={6} footer={<TFooter  icon={<Plus />} onClick={() => router.push(`/admin/projects/create`) }>Add another field to this collection type</TFooter>}>
                             <Thead>
                             <Tr>
                                 <Th>
@@ -236,8 +236,8 @@ export default function Services({ services, page }) {
                                         if (e.target.checked === true) {
                                             setDeleteButton(true);
                                             setAllChecked(true);
-                                            setCheckboxVal(services.data.map(service => service.id));
-                                            setCheckedItems(services.data.map(service => service.id));
+                                            setCheckboxVal(projects.data.map(project => project.id));
+                                            setCheckedItems(projects.data.map(project => project.id));
                                             
                                         } else {
                                             setDeleteButton(false);
@@ -277,26 +277,26 @@ export default function Services({ services, page }) {
                             </Thead>
                             <Tbody>
                             
-                            {services.data.map (service => ( <Tr key={service.id}>
+                            {projects.data.map (project => ( <Tr key={project.id}>
                                 <Td>
-                                    {/* <BaseCheckbox aria-label={service.attributes.title} /> */}
+                                    {/* <BaseCheckbox aria-label={project.attributes.title} /> */}
                                     
-                                    <BaseCheckbox aria-label={service.attributes.title} 
+                                    <BaseCheckbox aria-label={project.attributes.title} 
                                         type="checkbox"
                                         checked={
-                                            checkoxval.includes(service.id)
+                                            checkoxval.includes(project.id)
                                         }
 
                                         onChange={() => {
                                             // if the checkbox is checked set all checked to 
-                                            if (  checkoxval.length === 1 && checkoxval.includes(service.id) ) {
-                                                setCheckboxVal([service.id]);
-                                                setCheckedItems([service.id]);
+                                            if (  checkoxval.length === 1 && checkoxval.includes(project.id) ) {
+                                                setCheckboxVal([project.id]);
+                                                setCheckedItems([project.id]);
                                                 setAllChecked(false);
                                                 setDeleteButton(false);
                                             } else {
                                                 // if the checkbox is not checked set all checked to false
-                                                if ( checkoxval.includes(service.id) ) {
+                                                if ( checkoxval.includes(project.id) ) {
                                                     setAllChecked(true);
                                                     setDeleteButton(true);
                                                 } else {
@@ -306,42 +306,42 @@ export default function Services({ services, page }) {
 
                                             }
 
-                                            if (checkoxval.includes(service.id)) {
-                                                const index = checkoxval.indexOf(service.id);
-                                                setCheckboxVal(checkoxval.filter(item => item !== service.id));
-                                                setCheckedItems(checkoxval.filter(item => item !== service.id));
+                                            if (checkoxval.includes(project.id)) {
+                                                const index = checkoxval.indexOf(project.id);
+                                                setCheckboxVal(checkoxval.filter(item => item !== project.id));
+                                                setCheckedItems(checkoxval.filter(item => item !== project.id));
                                                 //setAllChecked(false);
                                                  
                                             } else {
-                                                setCheckboxVal([...checkoxval, service.id]);
-                                                setCheckedItems([...checkedItems, service.id]);
+                                                setCheckboxVal([...checkoxval, project.id]);
+                                                setCheckedItems([...checkedItems, project.id]);
                                                 //setAllChecked(true);
                                             }
                                         }}
-                                        value={service.id}
-                                        name={service.id}
+                                        value={project.id}
+                                        name={project.id}
                                        
                                     />
                                      
                                  </Td>
                                 <Td>
-                                    <Typography textColor="neutral800">{service.id}</Typography>
+                                    <Typography textColor="neutral800">{project.id}</Typography>
                                 </Td>
                                 <Td>
-                                    <Typography textColor="neutral800">{service.attributes.title}</Typography>
+                                    <Typography textColor="neutral800">{project.attributes.title}</Typography>
                                 </Td>
                                 <Td>
-                                    <Typography textColor="neutral800">{service.attributes.slug}</Typography>
+                                    <Typography textColor="neutral800">{project.attributes.slug}</Typography>
                                 </Td>
                                 <Td>
-                                    <Typography textColor="neutral800">{moment(service.attributes.publishedAt).format("yyyy-MM-DD")}</Typography>
+                                    <Typography textColor="neutral800">{moment(project.attributes.publishedAt).format("yyyy-MM-DD")}</Typography>
                                 </Td>
                                 
-                                <Td>{console.log(service.attributes.cover)} 
+                                <Td>{console.log(project.attributes.cover)} 
                                     {
-                                    service.attributes.thumbnail.data  !=null ?
+                                    project.attributes.thumbnail.data  !=null ?
                                     
-                                        <Avatar  src={service.attributes.thumbnail.data.attributes.url} alt={service.attributes.title} />
+                                        <Avatar  src={project.attributes.thumbnail.data.attributes.url} alt={project.attributes.title} />
                                     : 
                                         <Avatar  src="/images/default-cover.png"  />
                                       
@@ -349,12 +349,12 @@ export default function Services({ services, page }) {
                                 </Td>
                                 
                                 <Td>
-                                    <Typography textColor="neutral800">{service.attributes.locale}</Typography>
+                                    <Typography textColor="neutral800">{project.attributes.locale}</Typography>
                                 </Td>
                                 <Td>
                                     <Typography textColor="neutral800">
                                          {
-                                        service.attributes.publishedAt !== null ?
+                                        project.attributes.publishedAt !== null ?
                                         <Badge background="success100" >Published</Badge>
                                         :
                                         <Badge background="secondary100" >Draft</Badge>
@@ -365,16 +365,16 @@ export default function Services({ services, page }) {
                                 <Td>
                                     <Flex>
                                     {/* EDIT */}
-                                    <IconButton onClick={() => router.push(`/admin/services/edit/${service.id}`)} label="Edit" noBorder icon={<Pencil />} />
+                                    <IconButton onClick={() => router.push(`/admin/projects/edit/${project.id}`)} label="Edit" noBorder icon={<Pencil />} />
 
                                     {/* DELETE */}
                                     <Box paddingLeft={1}>
                                         <IconButton label="Delete" 
-                                        onClick={() => showPopup(service)}
-                                        title={service.id}  noBorder icon={<Trash />} />
+                                        onClick={() => showPopup(project)}
+                                        title={project.id}  noBorder icon={<Trash />} />
                                     </Box>
                                     {/* EDIT */}
-                                    <a href={`/services/${service.attributes.slug}`}><IconButton   label="View" noBorder icon={<Eye />} /></a>
+                                    <a href={`/projects/${project.attributes.slug}`}><IconButton   label="View" noBorder icon={<Eye />} /></a>
                                     </Flex>
                                 </Td>
                                 
@@ -385,13 +385,13 @@ export default function Services({ services, page }) {
             }
             
             {/* Pagination */}
-            { services.data.length > 0 ?
+            { projects.data.length > 0 ?
             
             <Box padding={12}  background="neutral100"  className="d-flex align-items-center justify-content-center mt-4">
             <Pagination activePage={page} pageCount={lastPage}>
                 <PreviousLink 
-                onClick={() => { router.push(`/admin/services?page=${page - 1}`) }}
-                to={`/admin/services?page=${page - 1}`}
+                onClick={() => { router.push(`/admin/projects?page=${page - 1}`) }}
+                to={`/admin/projects?page=${page - 1}`}
                 >Go to previous page</PreviousLink>
                 {   
                     pageNumbers.map(number =>  (
@@ -401,7 +401,7 @@ export default function Services({ services, page }) {
                             to={`/${number}`} 
                             onClick={(e) => {
                                 e.preventDefault();
-                                router.push(`/admin/services?page=${number}`);
+                                router.push(`/admin/projects?page=${number}`);
                             }}
                             >
                             {number}
@@ -410,8 +410,8 @@ export default function Services({ services, page }) {
                 }
                     
                 <NextLink 
-                onClick={() => { router.push(`/admin/services?page=${page + 1}`) }}
-                    to={`/admin/services?page=${page + 1}`} >
+                onClick={() => { router.push(`/admin/projects?page=${page + 1}`) }}
+                    to={`/admin/projects?page=${page + 1}`} >
                 Go to next page</NextLink>
                 </Pagination>
                 </Box>
@@ -440,7 +440,7 @@ export default function Services({ services, page }) {
                     
                     endAction={<Button 
                         variant="danger-light" title="Delete" startIcon={<Trash />}
-                        onClick={() => { deleteService(service.id)}}>
+                        onClick={() => { deleteproject(project.id)}}>
                     Confirm
                     </Button>} 
                 />
@@ -458,12 +458,12 @@ export async function getServerSideProps({query: {page = 1}}) {
     const API_URL = process.env.NEXT_PUBLIC_STRAPI_API_URL;
     const start = +page === 1 ? 0 : (+page - 1) * 6;
     //publicationState=preview or publicationState=live
-    const res = await fetch(`${API_URL}/api/services?populate=*&pagination[start]=${start}&pagination[limit]=6&sort=id:DESC&publicationState=preview`); 
+    const res = await fetch(`${API_URL}/api/projects?populate=*&pagination[start]=${start}&pagination[limit]=6&sort=id:DESC&publicationState=preview`); 
     
     const data = await res.json();
     return {
         props: {
-        services: data,
+        projects: data,
         //page: parseInt(page),// convert string to number
         page: +page,// convert string to number
     },

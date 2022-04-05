@@ -9,7 +9,7 @@ import { API_URL } from 'url.config';
 
 
 
-export default function Home({projectsList,crew}) {
+export default function Home({projectsList,crew,bio}) {
 
   return (
     <Layout title={"Loogaroo | Animation Studio"}>
@@ -17,7 +17,7 @@ export default function Home({projectsList,crew}) {
       <><div className="main-content">
         <Projects  projectsList={projectsList}/>
         <DividerPrimary />
-        <Bio />
+        <Bio bio={bio} />
         <DividerSecondary />
         <Crew crew={crew} />
         <DividerSecondary />
@@ -32,12 +32,15 @@ export async function getStaticProps(){
   const API_URL = process.env.NEXT_PUBLIC_STRAPI_API_URL;
   const res = await fetch(`${API_URL}/api/projects?populate=*`);
   const res2 = await fetch(`${API_URL}/api/crews?populate=*`);
+  const res3 = await fetch(`${API_URL}/api/bio?populate=*`);
   const projectsList = await res.json();
   const crew = await res2.json();
+  const bio = await res3.json();
   return {
       props: {
         projectsList,
-        crew
+        crew,
+        bio
       },
       revalidate: 1
   }
