@@ -27,7 +27,9 @@ export default function Crew ({crew}) {
                     <div className="col-md-4">
                         <div className="single-crew">
                             <div className="crew-image">
-                                <Image src={singleCrew.attributes.picture.data.attributes.url}  width={350} height={350}  className="img-fluid" alt="" />
+                                <Link href={`/crew/${singleCrew.attributes.slug}`}> 
+                                    <a><Image src={singleCrew.attributes.picture.data.attributes.url}  width={350} height={350}  className="img-fluid" alt="" /></a>
+                                </Link>
                             </div>
                             <div className="crew-content">
                                 <div className="crew-name">
