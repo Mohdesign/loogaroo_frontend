@@ -9,7 +9,7 @@ import { API_URL } from 'url.config';
 
 
 
-export default function Home({projectsList,crew,bio}) {
+export default function Home({projectsList,crew,bio,crewheader}) {
 
   return (
     <Layout title={"Loogaroo | Animation Studio"}>
@@ -19,7 +19,7 @@ export default function Home({projectsList,crew,bio}) {
         <DividerPrimary />
         <Bio bio={bio} />
         <DividerSecondary />
-        <Crew crew={crew} />
+        <Crew crew={crew} crewheader={crewheader}/>
         <DividerSecondary />
         <Contact />
         </div>
@@ -33,14 +33,17 @@ export async function getStaticProps(){
   const res = await fetch(`${API_URL}/api/projects?populate=*`);
   const res2 = await fetch(`${API_URL}/api/crews?populate=*`);
   const res3 = await fetch(`${API_URL}/api/bio?populate=*`);
+  const res4 = await fetch(`${API_URL}/api/crew-header?populate=*`);
   const projectsList = await res.json();
   const crew = await res2.json();
   const bio = await res3.json();
+  const crewheader = await res4.json();
   return {
       props: {
         projectsList,
         crew,
-        bio
+        bio,
+        crewheader
       },
       revalidate: 1
   }
