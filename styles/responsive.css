@@ -38,10 +38,52 @@ responsive
 }
 
 @media screen and (max-width:667px){
+  .navbar-collapse {
+    padding: 0 0;
+  }
   .headline-content .headline-title {
-    font-size: 50px!important;
+    font-size: 30px!important;
+  }
+  .headline-subtitle {
+    font-size: 19px!important;
   }
   .headline-content.intro {
-    padding: 75px 0 0px 0;
+    padding: 15px 0 0px 0;
+  }
+  .headline-content.intro .headline-title {
+    font-size: 35px!important;
+  }
+  .space-sm {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .nav-link {
+    padding: 0 0;
+  }
+  .navbar-nav span {
+    margin: -3px 10px 0 10px;
+  }
+  #portfolio {
+    margin-bottom: 48px;
+  }
+  .project-intro li.title {
+    font-size: 22px;
+  }
+  .project-intro li {
+    font-size: 16px;
+    padding: 7px 0 7px 0;
+  }
+  .lead {
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: inherit;
+  }
+  .footer ul li a {
+    font-size: 18px;
+    width: 45px;
+    height: 45px;
+  }
+  .footer {
+    margin-bottom: 0;
   }
 }
