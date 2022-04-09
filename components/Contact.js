@@ -1,21 +1,22 @@
 import Image from "next/image"
 import Link from "next/link"
 import { useEffect } from "react";
-export default function Contact () {
+export default function Contact ({contact}) {
     return (
         <>
+        {contact.data.attributes ? (
         <section className="space-sm">
         <div id="contact" className="container">
             <div className="row d-flex align-content-center text-center">
                 <div className="col-md-12">
                     <div className="headline mt-0 mb-0">
                         <div className="headline-content">
-                            <h2 className="headline-title display-4">Contact Us</h2>
+                            <h2 className="headline-title display-4">{ contact.data.attributes.title} </h2>
                          </div>
                     </div>
                     <div className="col-md-12 mx-auto">
                         <p className="headline-subtitle">
-                        Ain't nobody got time to wait, and we won't let you. Give us a call 506.622.3333 or drop us a line at gfowler@loogaroo.com and we'll get back to you immediatley. 
+                        { contact.data.attributes.subtitle}
                         </p>
                     </div>
                 </div>
@@ -31,18 +32,15 @@ export default function Contact () {
                         <div className="col-md-12 contact-info">
                             <p>
                                 <strong>Address</strong><br/>
-                                142 Newcastle blvd <br/>
-                                E1V 1K8 Miramichi, <br/>NB, Canada
+                                { contact.data.attributes.address}
                             </p>
                         </div>
                 
                         <div className="col-md-12 contact-info">
                             <p>
                                 <strong>Contact Info</strong>
-                                
-                                <a href="mailto:gfowler@loogaroo.com ">gfowler@loogaroo.com </a>
-                                <a href="tel:5066223333">506 622.3333</a>
-                        
+                                <a href={`mailto:${contact.data.attributes.email}`}>{ contact.data.attributes.email} </a>
+                                <a href= {`tel:${contact.data.attributes.phone}`}>{ contact.data.attributes.phone}</a>
                             </p>
                         </div>
                         
@@ -51,6 +49,9 @@ export default function Contact () {
             </div>
         </div>
     </section>
+        ) : (
+            <p> NO CONTACT API</p>
+        )}
         </>
     )
 }

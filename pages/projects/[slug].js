@@ -56,7 +56,6 @@ export default function SingleProject({project}) {
 
                         {/* <ReactMarkdown escapeHtml={false}>{project.attributes.content}</ReactMarkdown> */}
                         
- 
                     </div>
 
 
