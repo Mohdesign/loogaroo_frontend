@@ -4,13 +4,13 @@ import DividerPrimary from '@/components/DividerPrimary'
 
 
 
-export default function CrewList({crew}) {
+export default function CrewList({crew,crewheader}) {
 
   return (
     <Layout title={"Projects | Loogaroo Animation Studio"}>
       {console.log(crew)}
       <><div className="main-content">
-        <Crew  crew={crew}/>
+      <Crew crew={crew} crewheader={crewheader}/>
         <DividerPrimary />
         </div>
       </>
@@ -21,31 +21,12 @@ export default function CrewList({crew}) {
 export async function getStaticProps(){
   const API_URL = process.env.NEXT_PUBLIC_STRAPI_API_URL;
   const res = await fetch(`${API_URL}/api/crews?populate=*`);
-   const crew = await res.json();
+  const res2 = await fetch(`${API_URL}/api/crew-header?populate=*`);
+  const crew = await res.json();
+  const crewheader = await res2.json();
   return {
-      props: {crew},
+      props: {crew,crewheader},
       revalidate: 1
   }
 }
-
-
-/*
-Fetching multiple API queries with getStaticProps
-export async function getStaticProps() {
-  const res1 = await fetch(`${API_URL}/api/testimonials`)
-  const res2 = await fetch(`${API_URL}/api/services`)
-  const res3 = await fetch(`${API_URL}/api/casestudies`)
-  const testimonials = await res1.json()
-  const services = await res2.json()
-  const casestudies = await res3.json()
-  return {
-    props: {
-      testimonials,
-      services,
-      casestudies,
-    },
-    revalidate: 10, // In seconds
-  }
-}
-
-*/
+ 
