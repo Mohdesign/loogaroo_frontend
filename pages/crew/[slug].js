@@ -11,7 +11,7 @@ export default function SingleCrew({crew}) {
 
   return (
     <Layout title={crew.attributes.name}>
-       <><div className="main-content">
+       <><div className="front-end main-content">
       
         <section className='single-project'>
             <div className="container" id="portfolio">

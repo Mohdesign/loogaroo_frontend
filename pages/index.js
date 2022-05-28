@@ -14,7 +14,7 @@ export default function Home({projectsList,crew,bio,crewheader,contact}) {
   return (
     <Layout title={"Loogaroo | Animation Studio"}>
       {console.log(projectsList)}
-      <><div className="main-content">
+      <><div className="front-end main-content">
         <Projects  projectsList={projectsList}/>
         <DividerPrimary />
         <Bio bio={bio} />

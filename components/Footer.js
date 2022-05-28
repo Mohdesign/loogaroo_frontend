@@ -2,7 +2,7 @@ export default function Footer () {
  
     return (
         <>
-      <footer className="footer pb-5">
+      <footer className="front-end footer pb-5">
         <div className="container">
             <div className="row">
                 <div className="col-md-12">

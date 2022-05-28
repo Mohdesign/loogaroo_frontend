@@ -2,40 +2,38 @@ import { ThemeProvider } from "@strapi/design-system/ThemeProvider";
 import { lightTheme } from "@strapi/design-system/themes";
 import {Box} from '@strapi/design-system/Box';
 import {Layout} from '@strapi/design-system/Layout';
-import ExclamationMarkCircle from '@strapi/icons/ExclamationMarkCircle';
-import Plus from '@strapi/icons/Plus';
-import Apps from '@strapi/icons/Apps';
-import Pencil from '@strapi/icons/Pencil';
-import ArrowLeft from '@strapi/icons/ArrowLeft';
-import {Tag } from '@strapi/design-system/Tag';
-import PropTypes from 'prop-types';
-  
-
-
- 
-
-
-
-  import {ContentLayout } from '@strapi/design-system/Layout';
-
-  import { Link } from '@strapi/design-system/Link';
-
-
-import Head from 'next/head';
+import {ContentLayout } from '@strapi/design-system/Layout';
+ import Head from 'next/head';
 // import Link from "next/link";
-import AdminNav from "./AdminNav";
-import { StaticRouter } from 'react-router-dom'
 import React from 'react';
- 
 import { Grid, GridItem } from '@strapi/design-system/Grid';
-import { Route } from "react-router-dom";
 import { useRouter } from 'next/router'
+import { useEffect } from 'react';
+import AdminNav from "./AdminNav";
+import Sidebar  from "./Sidebar/Sidebar.js";
+// reactstrap components
+import { Container } from "reactstrap";
+// core components
+import AdminNavbar from "./Navbars/AdminNavbar.js";
+import Header from "./Headers/Header.js";
+import AdminFooter from "./Footers/AdminFooter.js";
+import routes from "routes.js";
+
  
 
-export default function AdminLayout({ children, title, description, keywords}) {
+export default function AdminLayout({ props, children, title, description, keywords}) {
     
-    const router = useRouter();
+  // used for checking current route
+  const router = useRouter();
+  let mainContentRef = React.createRef();
+  useEffect(() => {
+    document.documentElement.scrollTop = 0;
+    document.scrollingElement.scrollTop = 0;
+    mainContentRef.current.scrollTop = 0;
+  }, []);
 
+   
+ 
     return (
         <>
             <Head>
@@ -73,21 +71,38 @@ export default function AdminLayout({ children, title, description, keywords}) {
       
                 <script src="https://cdn.tiny.cloud/1/mu9m62f047mk5selpnu744nmws6e1iroa0d8o9xpff740cgd/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
             </Head>
-         
-            <ThemeProvider theme={lightTheme} background="neutral100">
-                <Box background="neutral100">
-                    <Layout background="neutral100" >
-                        <Grid gap={0} style={{ height: '100vh'}}>
-                            <AdminNav />
-                            <GridItem col={11} className="grid-item" >
-                                <ContentLayout>
-                                    {children}
-                                </ContentLayout>
-                            </GridItem>
-                        </Grid>  
-                    </Layout>
-                </Box>     
-            </ThemeProvider>       
+            <div class="min-height-300 position-absolute w-100"></div>
+            <Sidebar
+                {...props}
+                routes={routes}
+                logo={{
+                innerLink: "/admin",
+                imgSrc: "/images/logo.svg",
+                imgAlt: "...",
+                }}
+            />
+            {/* <div className="main-content" ref={mainContentRef}>
+                <AdminNavbar {...props} brandText={getBrandText()} />
+                {children}
+                <Container fluid>
+                <AdminFooter />
+                </Container>
+            </div> */}
+            
+   
+                    
+            <div className="main-content admin-backend" ref={mainContentRef}>
+                
+                <Header />
+                {children}
+                <Container fluid>      
+                    <AdminFooter />
+                </ Container>
+                
+            </div>
+                           
+                 
+                
 
         </>
     

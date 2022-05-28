@@ -109,10 +109,14 @@ a.link:hover {
 a.link:hover::before {
   background: #000
 }
-.lead {
+.front-end .lead {
   font-size: 1.3rem;
   font-weight: 300;
   line-height: 2.2rem;
+}
+.front-end p {
+  font-size: 25px;
+  line-height: normal;
 }
 .space-md {
   padding-top: 90px;
@@ -123,19 +127,8 @@ a.link:hover::before {
   padding-top: 30px;
   padding-bottom: 30px
 }
-input:focus,
-textarea:focus {
-  outline: none !important;
-  box-shadow: none !important;
-}
-.contact input.form-control:focus,
-.contact textarea.form-control:focus {
-border: 1px solid #000!important
-}
-:focus {
-outline-color: transparent;
-outline-style: none;
-}
+ 
+
 .bg-dark {
   background-color: #212529!important;
 }
@@ -247,13 +240,22 @@ Container tweak
 /*.container {
   max-width: 1440px
 }*/
-.main-content {
+.front-end.main-content {
   padding: 0px; 
   margin: 0px;
   background-size: cover;
   background-attachment:unset;
   padding-top: 0px;
   padding-bottom: 0px;
+}
+.front-end.main-content:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
 }
 
 /*/////////////////////
@@ -277,7 +279,7 @@ Navigation
   list-style: none;
 }
 .navbar-light .navbar-nav .nav-link {
-  color: var(--nav-color);
+  color: var(--nav-color)!important;
   letter-spacing: .04rem;
   font-size: 30px;
   font-family: 'AR DELANEY';
@@ -600,26 +602,27 @@ padding-top: 3px;
 
 /* Footer */
 
-.footer {
+.front-end.footer {
   margin-top: 0;
   margin-bottom: 100px;
   text-align: center;
+  background: transparent ;
 }
 
-.footer .footer-title {
+.front-end.footer .footer-title {
   margin-bottom: 100px
 }
 
-.footer ul {
+.front-end.footer ul {
   margin-top: 30px
 }
 
-.footer ul li {
+.front-end.footer ul li {
 display: inline-block;
   margin-bottom: 10px
 }
 
-.footer ul li a {
+.front-end.footer ul li a {
   color: var(--primary-color);
   border: 2px solid;
   font-size: 25px;
@@ -632,7 +635,7 @@ display: inline-block;
   justify-content: center;
 }
 
-.footer ul li a:hover {
+.front-end.footer ul li a:hover {
   text-decoration: none;
 color: var(--secondary-color);
 }
@@ -644,7 +647,7 @@ color: var(--secondary-color);
 
 /* Conatact */
 
-.contact .form-control {
+/* .contact .form-control {
   display: block;
   width: 100%;
   height: calc(1.5em + .75rem + 2px);
@@ -653,4 +656,17 @@ color: var(--secondary-color);
   background-color: #fff;
   border: 1px solid #e9ecef;
   border-radius: 0;
+} */
+
+.media {
+  display: block;
+  align-items: flex-start;
+  width: 100%;
+}
+
+figure img {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }

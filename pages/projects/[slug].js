@@ -9,7 +9,7 @@ export default function SingleProject({project}) {
 
   return (
     <Layout title={project.attributes.title}>
-       <><div className="main-content">
+       <><div className="front-end main-content">
       
         <section className='single-project'>
             <div className="container" id="portfolio">
@@ -33,10 +33,8 @@ export default function SingleProject({project}) {
                 <div className="embed-responsive embed-responsive-16by9">
                 {/* <iframe className="embed-responsive-item" 
                 src= {"https://www.youtube.com/embed/" + project.attributes.video}
-                
                 allowfullscreen></iframe> */}
-
-                
+  
                  <div className="lead" dangerouslySetInnerHTML={{__html: project.attributes.video}}/> 
 
                 {/* <iframe src="https://player.vimeo.com/video/672681772?h=3d08603412&color=ffffff&title=0&byline=0&portrait=0&badge=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe> */}
@@ -53,8 +51,11 @@ export default function SingleProject({project}) {
                     </div>
                     <div className="col-md-7 offset-md-1 pr-md-4">
                          <div className="lead" dangerouslySetInnerHTML={{__html: project.attributes.content}}/> 
+                         
 
                         {/* <ReactMarkdown escapeHtml={false}>{project.attributes.content}</ReactMarkdown> */}
+
+                        
                         
                     </div>
 

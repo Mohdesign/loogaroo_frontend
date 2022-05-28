@@ -6,7 +6,7 @@ export default function Nav (){
     const router = useRouter();
     return (
         <>
-        <header>
+        <header className="front-end">
             <div className="container">
                 <div className="row d-flex align-content-center">
                     <div className="col-md-12">

@@ -9,7 +9,7 @@ export default function CrewList({crew,crewheader}) {
   return (
     <Layout title={"Projects | Loogaroo Animation Studio"}>
       {console.log(crew)}
-      <><div className="main-content">
+      <><div className="front-end main-content">
       <Crew crew={crew} crewheader={crewheader}/>
         <DividerPrimary />
         </div>

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-
+import { CloudinaryUnsigned } from 'puff-puff/CKEditor';
 function Editor({ onChange, editorLoaded, name, value }) {
   const editorRef = useRef();
   const { CKEditor, ClassicEditor } = editorRef.current || {};
@@ -11,74 +11,108 @@ function Editor({ onChange, editorLoaded, name, value }) {
     };
   }, []);
 
+ 
+ // Cloudinary Uploads Using Puff-Puff
+ function imagePluginFactory(editor) {
+  editor.plugins.get( 'FileRepository' ).createUploadAdapter = ( loader ) => {
+    return new CloudinaryUnsigned( loader, 'dtzuuvkas', 'default-preset', [ 160, 500, 1000, 1052 ]);
+  };
+}
+ 
+ 
   return (
     <div>
       {editorLoaded ? (
         <CKEditor
             
             config= {{
-             
+                // Config Cloudinary plugin
+                extraPlugins: [ imagePluginFactory ],
+                ImageUpload: {
+                  uploadUrl: 'https://api.cloudinary.com/v1_1/dtzuuvkas/upload',
+                  headers: {
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'Content-Type': 'multipart/form-data'
+                  },
+                },
+                  ImageUploadUI: {
+                    uploadButton: {
+                      label: 'Upload',
+                      title: 'Upload image'
+                    },
+                  },
+
                 forcePasteAsPlainText: true,
+
+                // MediaEmbed like Youtube and Vimeo
+                mediaEmbed: {
+                  previewsInData: true
+                },
+                // allow oembed
+                oembed_maxWidth: '100%',
+                oembed_maxHeight: '100%',
+                oembed_WrapperClass: 'embed-responsive embed-responsive-16by9',
+                oembed_WrapperStyle: 'margin-bottom: 10px;',
                  
-              //   allowedContent: true,
-	            //   forcePasteAsPlainText: true,
-              //   copyFormatting_allowedContexts : true,    
-              //   copyFormatting_allowFontStyling : true,
-              //   copyFormatting_allowList : true,
-              //   copyFormatting_allowLists : true,
-              //   copyFormatting_allowLinks : true,
-              //   pasteFromWordRemoveFontStyles : false,
-              //   copyFormatting_allowRules : 'b s u i em strong; span{text-decoration,font-weight}',
+                allowedContent: true,
+	              forcePasteAsPlainText: true,
+                copyFormatting_allowedContexts : true,    
+                copyFormatting_allowFontStyling : true,
+                copyFormatting_allowList : true,
+                copyFormatting_allowLists : true,
+                copyFormatting_allowLinks : true,
+                pasteFromWordRemoveFontStyles : false,
+                copyFormatting_allowRules : 'b s u i em strong; span{text-decoration,font-weight}',
 
-                // toolbar: [
+                toolbar: [
                     
-                //     'heading',
-                //     '|',
-                //     'bold',
-                //     'italic',
-                //     'link',
-                //     'bulletedList',
-                //     'numberedList',
-                //     'blockQuote',
-                //     'undo',
-                //     'redo',
-                //     'imageUpload',
-                //     'insertTable',
-                //     'mediaEmbed',
-                //     '|',
-                //     'outdent',
-                //     'indent',
-                //     '|',
-                //     'alignment',
-                //     '|',
-                //     'fontSize',
-                //     'fontFamily',
-                //     'fontColor',
-                //     'fontBackgroundColor',
-                //     '|',
-                //     'specialCharacters',
-                //     'insertHR',
-                //     '|',
-                //     'codeSnippet',
-                //     '|',
-                //     'undo',
-                //     'redo',
-                //     '|',
-                //     'fullScreen',
-                //     '|',
-                //     'indent',
-                //     'outdent',
-                //     '|',
-                //     'highlight',
-                //     '|',
-                //     'horizontalLine',
-                //     '|',
-                //     'align',
-                //     '|',
-                //     'indent',
-                //     'outdent',
+                    'heading',
+                    '|',
+                    'bold',
+                    'italic',
+                    'link',
+                    'bulletedList',
+                    'numberedList',
+                    'blockQuote',
+                    'undo',
+                    'redo',
+                    'imageUpload',
+                    'insertTable',
+                    'mediaEmbed',
+                    '|',
+                    'outdent',
+                    'indent',
+                    '|',
+                    'alignment',
+                    '|',
+                    'fontSize',
+                    'fontFamily',
+                    'fontColor',
+                    'fontBackgroundColor',
+                    '|',
+                    'specialCharacters',
+                    'insertHR',
+                    '|',
+                    'codeSnippet',
+                    '|',
+                    'undo',
+                    'redo',
+                    '|',
+                    'fullScreen',
+                    '|',
+                    'indent',
+                    'outdent',
+                    '|',
+                    'highlight',
+                    '|',
+                    'horizontalLine',
+                    '|',
+                    'align',
+                    '|',
+                    'indent',
+                    'outdent',
 
-                // ],
+                ],
                 heading: {
                   options: [
                       { model: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph' },

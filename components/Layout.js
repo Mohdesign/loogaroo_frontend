@@ -3,8 +3,8 @@ import Nav from "/components/Nav"
 import Footer from "/components/Footer"
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
-import { useState } from 'react'
-
+import Script from 'next/script'
+ 
 export default function Layout({ children, title, description, keywords}) {
     const router = useRouter();
 
@@ -182,64 +182,72 @@ export default function Layout({ children, title, description, keywords}) {
                 scrollTop: $(target).offset().top
             }, 1000);
         });
- 
+
+        // Iframely plugin
+        // npm install iframely --save
+        document.querySelectorAll( 'oembed[url]' ).forEach( element => {
+            iframely.load( element, element.attributes.url.value );
+        } );
+    
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
     return (
         <>
-            <Head>
-                <meta charSet="utf-8" />
-                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-                <meta name="description" content={description} />
-                <meta name="keywords" content={keywords} />
-                <meta name="author" content="Websolutions.ca" />
-                <meta name="theme-color" content="white" />
-                <meta name="theme-color" content="black" />
+        
+        <Head>
+            <meta charSet="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+            <meta name="description" content={description} />
+            <meta name="keywords" content={keywords} />
+            <meta name="author" content="Websolutions.ca" />
+            <meta name="theme-color" content="white" />
+            <meta name="theme-color" content="black" />
 
-                <title>{title}</title>
-                {/* favicon */}
-                <link rel="shortcut icon" href="/images/favicon/favicon.ico" type="image/x-icon" />
-                <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png" />
-                <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png" />
-                <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png" />
-                {/* iOS support */}
-                <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png" />
-                <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png" />
-                <link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png" />
-                <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png" />
-                <link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png" />
-                <link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png" />
-                <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png" />
-                <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png" />
-                <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png" />
-                {/* Android support */}
-                <link rel="apple-touch-icon-precomposed" href="/images/favicon/android-icon-192x192.png" />
-                <link rel="apple-touch-icon-precomposed" href="/images/favicon/android-icon-144x144.png" />
-                <link rel="apple-touch-icon-precomposed" href="/images/favicon/android-icon-96x96.png" />
-                <link rel="apple-touch-icon-precomposed" href="/images/favicon/images/android-icon-72x72.png" />
-                <link rel="apple-touch-icon-precomposed" href="/images/favicon/android-icon-48x48.png" />
-                <link rel="apple-touch-icon-precomposed" href="/images/favicon/android-icon-36x36.png" />
+            <title>{title}</title>
+            {/* favicon */}
+            <link rel="shortcut icon" href="/images/favicon/favicon.ico" type="image/x-icon" />
+            <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png" />
+            <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png" />
+            <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png" />
+            {/* iOS support */}
+            <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png" />
+            <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png" />
+            <link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png" />
+            <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png" />
+            <link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png" />
+            <link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png" />
+            <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png" />
+            <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png" />
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png" />
+            {/* Android support */}
+            <link rel="apple-touch-icon-precomposed" href="/images/favicon/android-icon-192x192.png" />
+            <link rel="apple-touch-icon-precomposed" href="/images/favicon/android-icon-144x144.png" />
+            <link rel="apple-touch-icon-precomposed" href="/images/favicon/android-icon-96x96.png" />
+            <link rel="apple-touch-icon-precomposed" href="/images/favicon/images/android-icon-72x72.png" />
+            <link rel="apple-touch-icon-precomposed" href="/images/favicon/android-icon-48x48.png" />
+            <link rel="apple-touch-icon-precomposed" href="/images/favicon/android-icon-36x36.png" />
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script> 
+            
+        </Head>
+                    
+                    
+        {/* Iframely to view the youtube video on frontend */}
+        <Script charset="utf-8" src="//cdn.iframe.ly/embed.js?api_key=f198f0e44812b2d884c41d"></Script>
+        <Nav />
 
-                <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossOrigin="anonymous"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>                
-                {/*Font Awesome icons*/}
-                <link rel="stylesheet" href="/fonts/fontawesome/css/all.min.css?v=2" />
-                {/*Google fonts */}
-                <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900&display=swap" rel="stylesheet"/> 
-            </Head>
-             <Nav />
-
-            {/* //use of router 
-            {router.pathname === '/' ? <div className="container-fluid">{children}</div> : <div className="container">{children}</div>}
-            */}
-            <div className="main-container container">
-                {children}
-                <Footer />
-            </div> 
+        {/* //use of router 
+        {router.pathname === '/' ? <div className="container-fluid">{children}</div> : <div className="container">{children}</div>}
+        */}
+        <div className="front-end main-container container">
+            {children}
+            <Footer />
+        </div> 
   
 
-        </>
+</>
     
     )
 }

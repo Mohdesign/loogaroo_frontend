@@ -17,7 +17,9 @@ export default function Projects ({projectsList}) {
                         <div className="entry work-entry branding" key={index}>
                             <Link href={`/projects/${project.attributes.slug}`}> 
                             <a>
+                                {project.attributes.thumbnail.data && (
                                 <div className="entry-image imageBG" data-img={project.attributes.thumbnail.data.attributes.url}></div>
+                                )}
                                 <div className="work-entry-hover">
                                     <div className="work-entry-content">
                                         <div className="work-entry-title">{project.attributes.title}</div>

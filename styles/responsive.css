@@ -3,8 +3,8 @@
 responsive
 /////////////////////////////////////////*/
 @media screen and (max-width:991px){
-  .navbar-light .navbar-nav .nav-link,
-  .navbar-nav span {
+ .front-end  .navbar-light .navbar-nav .nav-link,
+  .front-end .navbar-nav span {
     font-size: 25px!important;
   }
   .headline-subtitle {
@@ -23,17 +23,19 @@ responsive
       line-height: 1.2;
   }
  
-  .navbar-collapse {
+  .front-end .navbar-collapse {
+    position: relative;
     display: flex !important;
-    flex-basis: 92%;
-    flex-grow: -1;
-    align-items: center;
-    justify-content: center;
-    background: #000000;
-
-    padding: 15px 0;
-    border-radius: 7px;
+    flex-basis: 92%!important;
+    flex-grow: -1!important;
+    align-items: center!important;
+    justify-content: center!important;
+    background: #000000!important;
+    opacity: 1!important;
+    padding: 0px 0!important;
+    border-radius: 7px!important;
   }
+  
 
 }
 
@@ -47,11 +49,15 @@ responsive
   .headline-subtitle {
     font-size: 21px!important;
   }
-  .headline-content.intro {
-    padding: 15px 0 0px 0;
+  .front-end .headline-content.intro {
+    padding: 15px 0 0px 0!important;
   }
-  .headline-content.intro .headline-title {
+  .front-end .headline-content.intro .headline-title {
     font-size: 35px!important;
+    line-height: normal!important;
+  }
+  .front-end .navbar {
+    padding: 0 0;
   }
   .space-sm {
     padding-top: 0;
