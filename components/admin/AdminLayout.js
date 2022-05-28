@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { ThemeProvider } from "@strapi/design-system/ThemeProvider";
 import { lightTheme } from "@strapi/design-system/themes";
 import {Box} from '@strapi/design-system/Box';
@@ -69,9 +70,9 @@ export default function AdminLayout({ props, children, title, description, keywo
                 <link rel="apple-touch-icon-precomposed" href="/images/favicon/android-icon-48x48.png" />
                 <link rel="apple-touch-icon-precomposed" href="/images/favicon/android-icon-36x36.png" />
       
-                <script src="https://cdn.tiny.cloud/1/mu9m62f047mk5selpnu744nmws6e1iroa0d8o9xpff740cgd/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+                {/* <script src="https://cdn.tiny.cloud/1/mu9m62f047mk5selpnu744nmws6e1iroa0d8o9xpff740cgd/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script> */}
             </Head>
-            <div class="min-height-300 position-absolute w-100"></div>
+            <div className="min-height-300 position-absolute w-100"></div>
             <Sidebar
                 {...props}
                 routes={routes}
@@ -88,11 +89,8 @@ export default function AdminLayout({ props, children, title, description, keywo
                 <AdminFooter />
                 </Container>
             </div> */}
-            
-   
-                    
+        
             <div className="main-content admin-backend" ref={mainContentRef}>
-                
                 <Header />
                 {children}
                 <Container fluid>      
@@ -100,12 +98,7 @@ export default function AdminLayout({ props, children, title, description, keywo
                 </ Container>
                 
             </div>
-                           
-                 
-                
-
         </>
-    
     )
 }
 

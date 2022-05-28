@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/jsx-props-no-spreading */
 import 'bootstrap/dist/css/bootstrap.css';
 // import '@/styles/dashboard/admin.css';

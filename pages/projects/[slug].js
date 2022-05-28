@@ -15,13 +15,13 @@ export default function SingleProject({project}) {
             <div className="container" id="portfolio">
                 <header>
                 {/* <DividerPrimary /> */}
-                    <div class="container">
-                        <div class="row d-flex align-content-center text-center">
-                            <div class="col-md-12">
-                                <div class="headline mt-0 mb-4">
-                                    <div class="headline-content">
-                                        <h1 class="headline-title display-5">{project.attributes.title}</h1>
-                                        <p class="headline-subtitle">{project.attributes.type}</p>
+                    <div className="container">
+                        <div className="row d-flex align-content-center text-center">
+                            <div className="col-md-12">
+                                <div className="headline mt-0 mb-4">
+                                    <div className="headline-content">
+                                        <h1 className="headline-title display-5">{project.attributes.title}</h1>
+                                        <p className="headline-subtitle">{project.attributes.type}</p>
                                     </div>
                                 </div>
                             </div>

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import { ThemeProvider } from "@strapi/design-system/ThemeProvider";
 import { lightTheme } from "@strapi/design-system/themes";
 import { Table, Thead, Tbody, Tr, Td, Th,TFooter  } from '@strapi/design-system/Table';
@@ -253,7 +254,7 @@ export default function projects({ projects, page }) {
                                             setCheckedItems([]);
                                         }
                                     }}
-                                    checked={allChecked} aria-label="Select all entries" />
+                                    checked={allChecked} />
                                 </Th>
                                 <Th>
                                 <Typography variant="sigma">ID</Typography>

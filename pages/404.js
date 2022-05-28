@@ -13,7 +13,7 @@ export default function Custom404() {
                         <div className="headline mt-0 mb-0">
                             <div className="headline-content text-center">
                             <h1 className="headline-title display-3">Page <span className="text-danger">NOT</span> found!</h1>
-                            <p className="headline-subtitle">The page you were looking for doesn't exist. You may have mistyped the address or the page may have moved.</p>
+                            <p className="headline-subtitle">The page you were looking for doesn&lsquo;t exist. You may have mistyped the address or the page may have moved.</p>
                            <p className="pt-5"><Link href="/"><a  style={{borderBottom: '1px solid #212529'}}>Back home</a></Link></p>
                             </div>
                         </div>

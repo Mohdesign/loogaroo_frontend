@@ -12,7 +12,7 @@ export default function Bio ({bio}) {
                         <div className="headline mt-0 mb-0">
                             <div className="headline-content">
                                 <div><Image src="/images/bio-icon.png" 
-                                width={248} height={357} className="img-fluid mb-3" /></div>
+                                width={248} height={357} className="img-fluid mb-3" alt={bio.data.attributes.title} /></div>
                                 <h2 className="headline-title display-4">{bio.data.attributes.title}</h2>
                             </div>
                         </div>
@@ -26,7 +26,7 @@ export default function Bio ({bio}) {
                     <div className="col-md-12">
                         <div className="headline mt-0 mb-0">
                             <div className="headline-content">
-                                <div><Image src="/images/bio-icon.png" width={248} height={357} className="img-fluid mb-3" /></div>
+                                <div><Image src="/images/bio-icon.png" width={248} height={357} className="img-fluid mb-3" alt="Bio img" /></div>
                                 <h2 className="headline-title display-4">There is no API BIO</h2>
                             </div>
                         </div>

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable camelcase */
 import axios from 'axios';
@@ -361,7 +362,7 @@ export default function CreateServices({ allCategories,allAuthors }) {
                               {...getInputProps()}
                               id="uploadImage"
                             />
-                            <p>Drag'n'drop thumbnail image, or click to select image</p>
+                            <p>Drag&apos;n&apos;drop thumbnail image, or click to select image</p>
 
                           </div>
                         )}
@@ -396,6 +397,7 @@ export default function CreateServices({ allCategories,allAuthors }) {
                             { createObjectURL
                               ? (
                                 <>
+                                 
                                   <img
                                     src={createObjectURL}
                                     alt="Thumbnail"
@@ -466,7 +468,7 @@ export default function CreateServices({ allCategories,allAuthors }) {
                             className="form-control-label"
                             htmlFor="title"
                           >
-                            Title <span class="text-warning">*</span>
+                            Title <span className="text-warning">*</span>
                           </label>
                           <Input
                             className="form-control"
@@ -489,7 +491,7 @@ export default function CreateServices({ allCategories,allAuthors }) {
                             className="form-control-label"
                             htmlFor="client"
                           >
-                            Client <span class="text-warning">*</span>
+                            Client <span className="text-warning">*</span>
                           </label>
                           <Input
                             className="form-control"
@@ -508,7 +510,7 @@ export default function CreateServices({ allCategories,allAuthors }) {
                             className="form-control-label"
                             htmlFor="title"
                           >
-                            Author <span class="text-warning">*</span>
+                            Author <span className="text-warning">*</span>
                           </label>
                           <Select
                             isMulti
@@ -704,7 +706,7 @@ export default function CreateServices({ allCategories,allAuthors }) {
                               type="multiple"
                               {...getInputProps()}
                             />
-                            <p>Drag'n'drop files, or click to select files</p>
+                            <p>Drag&apos;n&apos;drop files, or click to select files</p>
 
                           </div>
                         )}
@@ -713,7 +715,7 @@ export default function CreateServices({ allCategories,allAuthors }) {
                         <Row>
                           {
                         galleryFile.map((f) => (
-                          <Col lg="2 px-2">
+                          <Col lg="2 px-2" key={f.id}>
                             <Card className="mb-3">
                               <img
                                 className="dropzone-preview"

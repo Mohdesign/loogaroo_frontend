@@ -66,11 +66,11 @@ export default function Contact() {
                         
                         <span className="c_detail">
                             <span className="c_name">Facebook:</span>
-                            <span className="c_desc"><a href="https://www.facebook.com/websolutions.ca/" title="" target="_blank">@websolutions.ca</a></span>
+                            <span className="c_desc"><a href="https://www.facebook.com/websolutions.ca/" title="" target="_blank" rel="noreferrer">@websolutions.ca</a></span>
                         </span>
                         <span className="c_detail">
                             <span className="c_name">Instagram:</span>
-                            <span className="c_desc"><a href="https://www.instagram.com/websolutions.ca/?hl=en" title="" target="_blank">@websolutions.ca</a></span>
+                            <span className="c_desc"><a href="https://www.instagram.com/websolutions.ca/?hl=en" title="" target="_blank" rel="noreferrer">@websolutions.ca</a></span>
                         </span>
                         </div>
                     </div>          

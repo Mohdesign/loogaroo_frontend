@@ -390,7 +390,7 @@ export default function EditServices({ project, allCategories,allAuthors }) {
   };
   useEffect(() => {
     setPics(allImages);
-  }, []);
+  }, [allImages]);
 
   // Clipboard copy
   const [copyMessage, setCopyMessage] = useState(false);
@@ -649,7 +649,7 @@ export default function EditServices({ project, allCategories,allAuthors }) {
                               {...getInputProps()}
                               id="uploadImage"
                             />
-                            <p>Drag'n'drop thumbnail image, or click to select image</p>
+                            <p>Drag&apos;n&apos;drop thumbnail image, or click to select image</p>
 
                           </div>
                         )}
@@ -1039,7 +1039,7 @@ export default function EditServices({ project, allCategories,allAuthors }) {
                               type="multiple"
                               {...getInputProps()}
                             />
-                            <p>Drag'n'drop files, or click to select files</p>
+                            <p>Drag&apos;n&apos;drop files, or click to select files</p>
 
                           </div>
                         )}
@@ -1058,7 +1058,7 @@ export default function EditServices({ project, allCategories,allAuthors }) {
                             <ul className="dz-preview dz-preview-multiple list-group list-group-lg list-group-flush">
                               {pics.map((pic) => (
 
-                                <li className="list-group-item px-0 dz-processing dz-image-preview">
+                                <li className="list-group-item px-0 dz-processing dz-image-preview" key={pic.id}>
                                   <div className="row  d-flex align-items-center">
                                     <div className="col-auto">
                                       <div className="avatar">
@@ -1133,7 +1133,7 @@ export default function EditServices({ project, allCategories,allAuthors }) {
                           <Col lg="12 px-2">
                             <ul className="dz-preview dz-preview-multiple list-group list-group-lg list-group-flush">
                               {galleryFile.map((f) => (
-                                <li className="list-group-item px-0 dz-image-preview">
+                                <li className="list-group-item px-0 dz-image-preview" key={f.id}>
                                   <div className="row d-flex align-items-center">
                                     <div className="col-auto">
                                       <div className="avatar">

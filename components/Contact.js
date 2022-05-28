@@ -24,7 +24,7 @@ export default function Contact ({contact}) {
 
             <div className="row mt-5">
                 <div className="col-md-8 ">
-                    <iframe frameBorder={0} src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10883.73611581096!2d-65.5652105!3d47.0022683!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf41868b7427f3a6e!2sLoogaroo!5e0!3m2!1sen!2sca!4v1648482101406!5m2!1sen!2sca" width="100%" height="350"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe frameBorder={0} src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10883.73611581096!2d-65.5652105!3d47.0022683!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf41868b7427f3a6e!2sLoogaroo!5e0!3m2!1sen!2sca!4v1648482101406!5m2!1sen!2sca" width="100%" height="350"  allowFullScreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div> 
 
                 <div className="col-md-4">

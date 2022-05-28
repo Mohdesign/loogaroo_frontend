@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { ThemeProvider } from "@strapi/design-system/ThemeProvider";
 import { lightTheme } from "@strapi/design-system/themes";
 import { Table, Thead, Tbody, Tr, Td, Th,TFooter  } from '@strapi/design-system/Table';
@@ -350,9 +351,9 @@ export default function Editprojects({ project, allCategories }) {
                           : 
                             project.data.attributes.thumbnail.data == null ?
                             //""
-                            <img src="/images/default-cover.png" width="100%"  />
+                            <img src="/images/default-cover.png" width="100%" alt="img" />
                             :
-                            <img src={project.data.attributes.thumbnail.data.attributes.url} width="100%"  />
+                            <img src={project.data.attributes.thumbnail.data.attributes.url} width="100%" alt="img" />
                         }
                       </CardAsset>
                     </CardHeader>
@@ -377,8 +378,8 @@ export default function Editprojects({ project, allCategories }) {
                       <div className="form-group" style={{display:"none"}} >
                         <label htmlFor="uploadImage">Image thumbnail <span><Earth className="icon" /></span></label>
                       </div>
-                      <div class=" mb-3" style={{display:"none"}}>
-                        <input type="file" class="custom" id="uploadImage" onChange={handleInputChange}/>
+                      <div className=" mb-3" style={{display:"none"}}>
+                        <input type="file" className="custom" id="uploadImage" onChange={handleInputChange}/>
                       </div>
                   { /* END HIDE THE INPUT FILE WITH THE LABEL*/}
                     <hr/>

@@ -36,7 +36,7 @@ export default function Crew ({crew, crewheader}) {
             </div>
             <div className="row d-flex align-content-center text-center">
                 {crew.data.map((singleCrew, index) => (
-                    <div className="col-md-4">
+                    <div className="col-md-4" key={index}>
                         <div className="single-crew">
                             <div className="crew-image">
                                 <Link href={`/crew/${singleCrew.attributes.slug}`}> 

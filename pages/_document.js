@@ -12,7 +12,7 @@ class MyDocument extends Document {
           {/* <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900&display=swap" rel="stylesheet"/>  */}
           {/* Fonts and icons */}
           <link
-            href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
+            href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=optional"
             rel="stylesheet"
           />
         </Head>

@@ -17,13 +17,13 @@ export default function SingleCrew({crew}) {
             <div className="container" id="portfolio">
                 <header>
                 {/* <DividerPrimary /> */}
-                    <div class="container">
-                        <div class="row d-flex align-content-center text-center">
-                            <div class="col-md-12">
-                                <div class="headline mt-0 mb-4">
-                                    <div class="headline-content">
-                                        <h1 class="headline-title display-5">{crew.attributes.name}</h1>
-                                        <p class="headline-subtitle">{crew.attributes.position}</p>
+                    <div className="container">
+                        <div className="row d-flex align-content-center text-center">
+                            <div className="col-md-12">
+                                <div className="headline mt-0 mb-4">
+                                    <div className="headline-content">
+                                        <h1 className="headline-title display-5">{crew.attributes.name}</h1>
+                                        <p className="headline-subtitle">{crew.attributes.position}</p>
                                     </div>
                                 </div>
                             </div>
