@@ -84,12 +84,12 @@ responsive
     font-weight: 300;
     line-height: inherit;
   }
-  .footer ul li a {
+  .front-end .footer ul li a {
     font-size: 18px;
     width: 45px;
     height: 45px;
   }
-  .footer {
+  .front-end .footer {
     margin-bottom: 0;
   }
 }
